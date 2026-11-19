@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- BELL WORK DAY 0 | Skills: ELA.6.R.3.3 Compare Authors Across Time -->
+<title>Bell Ringer: Then vs. Now: How Kids Play</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#1d2a5b; --gold:#f2b632; --gold-soft:#fff4d6; --bg:#f6f3ff; --card:#ffffff;
+  --ink:#1f2433; --muted:#5b6275; --green:#1f9d55; --green-soft:#e3f7ea; --red:#d64545; --red-soft:#fde8e8;
+  --day:#8b5cf6; --line:#e3e0ef;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Nunito',system-ui,sans-serif;font-size:18px;line-height:1.55}
+h1,h2,h3{font-family:'Fredoka',system-ui,sans-serif}
+.wrap{max-width:880px;margin:0 auto;padding:16px}
+header{text-align:center;padding:18px 16px 4px}
+#logo{max-width:240px;width:55%;height:auto;display:block;margin:0 auto 6px}
+.badge{display:inline-block;background:var(--day);color:#fff;font-family:'Fredoka',system-ui,sans-serif;font-weight:600;font-size:18px;padding:4px 16px;border-radius:999px}
+header h1{margin:8px 0 4px;font-size:clamp(28px,5vw,40px);color:var(--navy)}
+.skills{margin:6px 0 0}
+.pill{display:inline-block;padding:3px 10px;border-radius:999px;font-size:14px;font-weight:700;margin:3px 3px}
+.p-prose{background:#ffe6e8;color:#a3212c}
+.p-vocab{background:#e2efff;color:#1a5fa8}
+.namebox{background:var(--card);border-radius:18px;padding:14px 16px;margin:14px 0;display:flex;gap:10px;align-items:center;flex-wrap:wrap;box-shadow:0 2px 0 var(--line)}
+.namebox label{font-weight:700}
+.namebox input{flex:1;min-width:180px;font-size:18px;padding:10px 12px;border:2px solid var(--line);border-radius:12px;font-family:inherit}
+.directions{background:var(--gold-soft);border:2px dashed var(--gold);border-radius:18px;padding:12px 16px;margin:10px 0 16px}
+.directions ul{margin:6px 0 0;padding-left:4px;list-style:none}
+.directions li{margin:4px 0}
+.topbar{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin:6px 0 12px;position:sticky;top:0;background:var(--bg);padding:8px 0;z-index:5}
+.keys{display:flex;gap:4px;font-size:24px}
+.keys span{filter:grayscale(1) opacity(.35)}
+.keys span.on{filter:none}
+.btn{font-family:'Fredoka',system-ui,sans-serif;font-weight:600;font-size:17px;border:none;border-radius:14px;padding:10px 16px;cursor:pointer;background:var(--navy);color:#fff}
+.btn.light{background:#fff;color:var(--navy);box-shadow:0 2px 0 var(--line)}
+.btn.gold{background:var(--gold);color:var(--navy)}
+.box{background:var(--card);border-radius:20px;padding:18px;margin:0 0 16px;box-shadow:0 3px 0 var(--line)}
+.review{border-left:10px solid var(--day)}
+.review h2{margin:0 0 8px;color:var(--navy);font-size:24px}
+.tip{margin:10px 0;padding:10px 12px;border-radius:14px}
+.tip.prose{background:#fff1f2}
+.tip.vocab{background:#eef5ff}
+.tip b.h{font-family:'Fredoka',system-ui,sans-serif;font-weight:600;font-size:19px}
+.tip ul{margin:6px 0 0 0;padding-left:22px}
+.ptitle{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:8px}
+.ptitle h2{margin:0;color:var(--navy);font-size:24px}
+#ptext p{margin:0 0 12px}
+#ptext h3{margin:16px 0 6px;color:var(--navy)}
+.poem{white-space:pre-line;font-size:19px;background:#fbfaff;border-radius:14px;padding:12px 16px;border:2px solid var(--line);margin:0 0 12px}
+.note{font-size:15px;color:var(--muted);font-style:italic}
+.speak{border:none;background:#eef0ff;border-radius:12px;padding:8px 12px;font-size:16px;cursor:pointer;font-family:'Fredoka',system-ui,sans-serif;color:var(--navy);flex-shrink:0}
+.q{background:var(--card);border-radius:20px;padding:18px;margin:0 0 16px;box-shadow:0 3px 0 var(--line)}
+.qhead{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+.qnum{font-family:'Fredoka',system-ui,sans-serif;font-weight:700;color:var(--navy);font-size:20px}
+.qtext{font-weight:700;margin:6px 0 12px}
+.opt{display:block;width:100%;text-align:left;font-family:inherit;font-size:18px;padding:12px 14px;margin:8px 0;border-radius:14px;border:3px solid var(--line);background:#fff;cursor:pointer;color:var(--ink)}
+.opt b{font-family:'Fredoka',system-ui,sans-serif;margin-right:6px;color:var(--navy)}
+.opt:disabled{cursor:default}
+.opt.correct{border-color:var(--green);background:var(--green-soft)}
+.opt.wrong{border-color:var(--red);background:var(--red-soft)}
+.fb{margin-top:10px;padding:12px 14px;border-radius:14px;font-size:17px;display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+.fb.good{background:var(--green-soft);border:2px solid var(--green)}
+.fb.bad{background:var(--red-soft);border:2px solid var(--red)}
+.done{text-align:center;background:linear-gradient(135deg,#fff7df,#f0e9ff);border:3px solid var(--gold)}
+.done .big{font-family:'Fredoka',system-ui,sans-serif;font-size:40px;font-weight:700;color:var(--navy)}
+footer{text-align:center;color:var(--muted);font-size:14px;padding:20px 0 40px}
+.tbtn{background:none;border:none;color:var(--muted);text-decoration:underline;cursor:pointer;font-size:14px;font-family:inherit}
+.key table{width:100%;border-collapse:collapse;font-size:16px}
+.key td,.key th{border-bottom:1px solid var(--line);padding:6px;text-align:left;vertical-align:top}
+.hidden{display:none!important}
+.power{background:linear-gradient(135deg,#1d2a5b,#4b2a8a);color:#fff;border-radius:22px;padding:18px;margin:0 0 16px;box-shadow:0 4px 0 #120c33}
+.power h2{margin:0 0 4px;font-size:28px;color:#ffd84d}
+.power .sub{color:#e6e0ff;margin:0 0 10px}
+.meter{height:22px;background:rgba(255,255,255,.18);border-radius:999px;overflow:hidden;margin:8px 0 4px}
+.meter div{height:100%;width:0;background:linear-gradient(90deg,#ffd84d,#ff8a3d,#ff4d8d);transition:width .6s}
+.power .q{color:var(--ink)}
+.power.locked{opacity:.85;text-align:center}
+.pow{position:fixed;left:50%;top:40%;transform:translate(-50%,-50%) scale(.2);font-family:'Fredoka',system-ui,sans-serif;font-weight:700;font-size:72px;color:#ffd84d;-webkit-text-stroke:3px #1d2a5b;z-index:60;pointer-events:none;animation:pow .9s ease-out forwards}
+@keyframes pow{0%{transform:translate(-50%,-50%) scale(.2) rotate(-12deg);opacity:0}30%{transform:translate(-50%,-50%) scale(1.2) rotate(6deg);opacity:1}100%{transform:translate(-50%,-50%) scale(1) rotate(0);opacity:0}}
+canvas#confetti{position:fixed;inset:0;pointer-events:none;z-index:50}
+@media (max-width:520px){body{font-size:17px}.box,.q{padding:14px}}
+</style>
+</head>
+<body>
+<canvas id="confetti"></canvas>
+<header>
+  <img id="logo" src="logo.png" alt="The Literacy Locksmith" onerror="this.style.display='none'">
+  <span class="badge">🔔 Bell Ringer · ⚡ Power-Up Punch</span>
+  <h1>Then vs. Now: How Kids Play</h1>
+  <div class="skills" id="skills"></div>
+</header>
+
+<div class="wrap">
+ <section id="student">
+  <div class="namebox">
+    <label for="name">✏️ First name &amp; last initial:</label>
+    <input id="name" autocomplete="off" placeholder="Example: Maya R.">
+  </div>
+  <div class="directions">
+    <b>📱 Bell Work Directions:</b>
+    <ul>
+      <li>1️⃣ Read the 🔑 <b>Quick Review</b> first. It's your cheat code!</li>
+      <li>2️⃣ Read the passage. Tap 🔊 if you want it read to you.</li>
+      <li>3️⃣ Tap your answer. You get <b>ONE try</b>, so look back at the text first! 👀</li>
+      <li>4️⃣ Tap 🔊 on the explanation to hear why.</li>
+      <li>5️⃣ Your work saves on your iPad automatically. 💾</li>
+      <li>6️⃣ Finish all 6 to unlock the ⚡ <b>Power-Up Punch</b> bonus round!</li>
+      <li>7️⃣ Take a screenshot 📸 of your final score and turn it in on Canvas.</li>
+    </ul>
+  </div>
+  <div class="topbar"><b style="font-family:'Fredoka',system-ui,sans-serif;color:var(--navy)">Keys unlocked:</b><div class="keys" id="keys"></div></div>
+  <div id="content"></div>
+ </section>
+
+ <section id="teacher" class="hidden">
+  <div class="box key">
+    <div class="ptitle"><h2>🧑‍🏫 Teacher Answer Key</h2><button class="btn light" onclick="closeTeacher()">Close</button></div>
+    <div id="keytable"></div>
+    <p style="margin-top:16px"><button class="btn gold" onclick="resetAll()">🔄 Reset this iPad (clears saved answers for this bell ringer)</button></p>
+  </div>
+ </section>
+
+ <footer>
+  Grade 6 ELA · Florida B.E.S.T. Standards<br>
+  <button class="tbtn" onclick="openTeacher()">Teacher</button>
+ </footer>
+</div>
+
+<script>
+/* ===== BELL WORK DAY 0 CONTENT ===== */
+const DAY_NUM = 0;
+const D = {"title": "Then vs. Now: How Kids Play", "skills": [["vocab", "ELA.6.R.3.3 Compare Authors Across Time"]], "review": [["vocab", "⏳ Comparing Texts From Different Times", "When two authors from different time periods write about the same topic, use the <b>T-S-D</b> check:", ["📌 <b>T = Topic:</b> What are BOTH texts about?", "🤝 <b>S = Same:</b> What do both authors think or feel?", "↔️ <b>D = Different:</b> How was life different then? How is the <b>word choice</b> different (formal vs. casual)?"]], ["vocab", "🕰️ Clue Words From Long Ago", "Older texts often use formal words like <i>permitted</i> (allowed), <i>weary</i> (tired), and <i>merrier</i> (happier). Those words are a clue to the time period!", []]], "passageTitle": "Kids at Play: Then and Now", "passage": "<h3>Text 1: Henry's Journal</h3>\n<p class=\"note\">A fictional journal entry written in the style of the 1890s, when many children lived on farms</p>\n<p><i>Saturday, the 9th of June</i></p>\n<p>This morning I finished my chores at the well and the woodpile before the sun was high, and Mother <b>permitted</b> me to go out to play. Thomas and I <b>fashioned</b> a ball from old rags and twine, and we played until our legs were weary. Later, the girls rolled hoops down the lane with sticks, laughing all the while. We have few toys, yet I do not think any child in the city has merrier days than we. When the supper bell rang, I was sorry to come in.</p>\n<p>— Henry</p>\n<h3>Text 2: Game Day</h3>\n<p class=\"note\">A blog post written by a sixth grader today</p>\n<p>On weekends, I play an online game with my friends who live in three different states. We wear headsets, crack jokes, and build whole cities together. My mom makes me take screen breaks, so I go outside and kick my soccer ball against the garage door. Sometimes the soccer ball is even more fun than the game! Whether you have the newest video game or just a ball, playing with your friends is the best part of being a kid.</p>\n<p>— Sofia, 6th grade</p>", "qs": [{"t": "vocab", "q": "What topic do BOTH texts address?", "o": ["How kids have fun and play", "How to build a city", "Doing chores on a farm", "Why video games are bad"], "a": 0, "e": "Henry writes about playing ball and rolling hoops. Sofia writes about online games and soccer. Both are about how kids play."}, {"t": "vocab", "q": "How are Henry's and Sofia's ideas ALIKE?", "o": ["Both think toys are a waste of time.", "Both think playing with friends brings a lot of joy.", "Both play online games.", "Both have to do chores before playing."], "a": 1, "e": "Henry says no child has “merrier days,” and Sofia says playing with friends is “the best part of being a kid.”"}, {"t": "vocab", "q": "How is the way they play DIFFERENT?", "o": ["Henry plays outside with homemade toys, while Sofia often plays an online game with friends who live far away.", "Henry plays video games, while Sofia rolls hoops.", "Neither of them plays with friends.", "They both only play soccer."], "a": 0, "e": "In the 1890s, Henry made a ball from rags. Today, Sofia uses headsets to play with friends in other states."}, {"t": "vocab", "q": "How does the time period affect each author's word choice?", "o": ["Both authors use modern slang.", "Henry uses formal words like “permitted” and “weary,” while Sofia uses casual, everyday words.", "Sofia uses old-fashioned words, while Henry uses slang.", "There is no difference in their word choice."], "a": 1, "e": "People wrote more formally in the 1890s. Sofia writes the way kids talk today (“crack jokes”)."}, {"t": "vocab", "q": "How does the time period shape Henry's point of view about play?", "o": ["He has many toys, so he is bored with them.", "He has chores and few toys, so simple games outside feel special to him.", "He wishes he could play video games.", "He does not like playing with Thomas."], "a": 1, "e": "Henry has to finish chores first and has “few toys,” but he still feels lucky. Life back then shaped how he sees play."}, {"t": "vocab", "q": "Which statement would BOTH authors most likely agree with?", "o": ["Kids today have more fun than kids long ago.", "You need expensive toys to have fun.", "Playing with friends is one of the best parts of being a kid.", "Kids should stay inside to play."], "a": 2, "e": "Even though their toys are very different, both authors love playing with friends."}], "power": [{"t": "vocab", "q": "Henry and Thomas “<b>fashioned</b> a ball from old rags and twine.” What does <b>fashioned</b> mean?", "o": ["bought", "made by hand", "threw away", "borrowed"], "a": 1, "e": "They used rags and twine to create a ball, so fashioned means made or built by hand."}, {"t": "vocab", "q": "Which sentence from Sofia's blog BEST shows how technology has changed the way kids play?", "o": ["“Sometimes the soccer ball is even more fun than the game!”", "“My mom makes me take screen breaks.”", "“We wear headsets, crack jokes, and build whole cities together.”", "“Playing with your friends is the best part of being a kid.”"], "a": 2, "e": "Headsets and building cities online with friends in other states would never have happened in Henry's time."}, {"t": "vocab", "q": "Henry writes, “We have few toys, yet I do not think any child in the city has merrier days than we.” What does this show?", "o": ["Henry is jealous of city kids.", "Henry is happy with his simple life, even without many toys.", "Henry wants to move to the city.", "Henry thinks toys are the most important thing."], "a": 1, "e": "“Yet” shows a contrast: few toys, but very happy days. Henry doesn't need a lot to have fun."}]};
+
+/* Mix up answer positions (same order every time, so the teacher key always matches) */
+(function(){
+  let seed = 424242;
+  const rnd = ()=>{ seed = (seed*1103515245+12345) % 2147483648; return seed/2147483648; };
+  D.qs.concat(D.power).forEach(q=>{
+    const idx = q.o.map((_,k)=>k);
+    for(let k=idx.length-1;k>0;k--){ const r=Math.floor(rnd()*(k+1)); [idx[k],idx[r]]=[idx[r],idx[k]]; }
+    q.o = idx.map(k=>q.o[k]); q.a = idx.indexOf(q.a);
+  });
+})();
+
+/* ===== AUTOSAVE (saves on this iPad) ===== */
+const SKEY = "llBellRinger_R33_powerup_v1";
+let state = {name:"", ans:D.qs.map(()=>null), pans:D.power.map(()=>null)};
+try{ const s = JSON.parse(localStorage.getItem(SKEY)); if(s && Array.isArray(s.ans) && s.ans.length===D.qs.length){ state = s; if(!Array.isArray(state.pans)) state.pans = D.power.map(()=>null); } }catch(e){}
+try{ if(!state.name){ state.name = localStorage.getItem("llBellWork_name") || ""; } }catch(e){}
+function save(){ try{ localStorage.setItem(SKEY, JSON.stringify(state)); localStorage.setItem("llBellWork_name", state.name||""); }catch(e){} }
+
+const nameEl = document.getElementById("name");
+nameEl.value = state.name || "";
+nameEl.addEventListener("input", ()=>{ state.name = nameEl.value; save(); });
+
+/* ===== RENDER ===== */
+const L = "ABCD";
+function pillFor(t){ return t==="prose" ? '<span class="pill p-prose">📖 Reading Prose &amp; Poetry</span>' : '<span class="pill p-vocab">🔤 Reading Across Genres &amp; Vocabulary</span>'; }
+document.getElementById("skills").innerHTML = D.skills.map(k=>`<span class="pill ${k[0]==='prose'?'p-prose':'p-vocab'}">${k[1]}</span>`).join("");
+
+function render(){
+  let h = `<div class="box review"><h2>🔑 Quick Review</h2>`;
+  D.review.forEach(r=>{
+    h += `<div class="tip ${r[0]}"><b class="h">${r[1]}</b><div>${r[2]}</div>${r[3].length?'<ul>'+r[3].map(x=>'<li>'+x+'</li>').join('')+'</ul>':''}</div>`;
+  });
+  h += `</div>`;
+  h += `<div class="box"><div class="ptitle"><h2>📖 ${D.passageTitle}</h2><button class="speak" onclick="speakEl('ptext')">🔊 Read to me</button></div><div id="ptext">${D.passage}</div></div>`;
+  D.qs.forEach((q,i)=>{
+    h += `<div class="q"><div class="qhead"><div><span class="qnum">Question ${i+1}</span> ${pillFor(q.t)}</div><button class="speak" onclick="speakQ(${i})" aria-label="Read question">🔊</button></div>
+      <div class="qtext">${q.q}</div>
+      ${q.o.map((o,j)=>`<button class="opt" id="o${i}_${j}" onclick="answer(${i},${j})"><b>${L[j]}</b> ${o}</button>`).join("")}
+      <div id="fb${i}"></div></div>`;
+  });
+  h += `<div id="powerbox"></div><div id="donebox"></div>`;
+  document.getElementById("content").innerHTML = h;
+  D.qs.forEach((q,i)=>{ if(state.ans[i]!=null) showResult(i,state.ans[i],false); });
+  updateKeys(); renderPower(false); checkDone(false);
+}
+function answer(i,j){
+  if(state.ans[i]!=null) return;  // one try only
+  state.ans[i]=j; save();
+  showResult(i,j,true); updateKeys();
+  if(score().n===D.qs.length){ renderPower(true); } else checkDone(true);
+}
+function pScore(){ let c=0,n=0; D.power.forEach((q,i)=>{ if(state.pans[i]!=null){ n++; if(state.pans[i]===q.a) c++; } }); return {c,n,t:D.power.length}; }
+function renderPower(fresh){
+  const box = document.getElementById("powerbox");
+  if(score().n<D.qs.length){
+    box.innerHTML = `<div class="power locked"><h2>⚡ Power-Up Punch</h2><p class="sub">🔒 Answer all 6 questions to unlock the bonus round!</p></div>`; return;
+  }
+  let h = `<div class="power"><h2>⚡ Power-Up Punch!</h2><p class="sub">Bonus round unlocked! 3 quick questions. Each right answer charges your power meter. Can you hit 100%? 💥</p>
+    <div class="meter"><div id="meterfill"></div></div><p class="sub" id="metertext" style="margin:0 0 12px"></p>`;
+  D.power.forEach((q,i)=>{
+    h += `<div class="q"><div class="qhead"><div><span class="qnum">⚡ Punch ${i+1}</span> ${pillFor(q.t)}</div><button class="speak" onclick="speakP(${i})" aria-label="Read question">🔊</button></div>
+      <div class="qtext">${q.q}</div>
+      ${q.o.map((o,j)=>`<button class="opt" id="po${i}_${j}" onclick="answerP(${i},${j})"><b>${L[j]}</b> ${o}</button>`).join("")}
+      <div id="pfb${i}"></div></div>`;
+  });
+  box.innerHTML = h + `</div>`;
+  D.power.forEach((q,i)=>{ if(state.pans[i]!=null) showP(i,state.pans[i],false); });
+  updateMeter();
+  if(fresh){ setTimeout(()=>box.scrollIntoView({behavior:"smooth",block:"start"}),400); popText("POWER UP! ⚡"); }
+}
+function answerP(i,j){
+  if(state.pans[i]!=null) return;
+  state.pans[i]=j; save(); showP(i,j,true); updateMeter(); checkDone(true);
+}
+function showP(i,j,fresh){
+  const q = D.power[i];
+  q.o.forEach((_,k)=>{ const b=document.getElementById(`po${i}_${k}`); b.disabled=true;
+    if(k===q.a) b.classList.add("correct"); else if(k===j) b.classList.add("wrong"); });
+  const ok = j===q.a;
+  document.getElementById("pfb"+i).innerHTML = `<div class="fb ${ok?'good':'bad'}"><div id="pfbt${i}"><b>${ok?'✅ POW! You got it!':'❌ Not quite. The answer is '+L[q.a]+'.'}</b> ${q.e}</div><button class="speak" onclick="speak(document.getElementById('pfbt${i}').textContent)" aria-label="Read the explanation">🔊</button></div>`;
+  if(fresh && ok){ popText(["POW! 💥","BAM! ⚡","KAPOW! 🥊"][i%3]); miniBurst(document.getElementById(`po${i}_${j}`)); }
+}
+function updateMeter(){
+  const p = pScore(), pct = Math.round(p.c/p.t*100);
+  const f = document.getElementById("meterfill"); if(f) f.style.width = pct+"%";
+  const t = document.getElementById("metertext"); if(t) t.textContent = `Power: ${pct}% ${pct===100?"🔥 MAX POWER!":""}`;
+}
+function popText(s){ const d=document.createElement("div"); d.className="pow"; d.textContent=s; document.body.appendChild(d); setTimeout(()=>d.remove(),1000); }
+function speakP(i){
+  const q = D.power[i], tmp = document.createElement("div"); tmp.innerHTML = q.q;
+  let t = "Power up punch " + (i+1) + ". " + tmp.textContent + " ";
+  q.o.forEach((o,j)=>{ t += " " + L[j] + ". " + o + (/[.!?”]$/.test(o)?" ":". "); });
+  speak(t);
+}
+function showResult(i,j,fresh){
+  const q = D.qs[i];
+  q.o.forEach((_,k)=>{ const b=document.getElementById(`o${i}_${k}`); b.disabled=true;
+    if(k===q.a) b.classList.add("correct"); else if(k===j) b.classList.add("wrong"); });
+  const ok = j===q.a;
+  document.getElementById("fb"+i).innerHTML = `<div class="fb ${ok?'good':'bad'}"><div id="fbt${i}"><b>${ok?'✅ You got it!':'❌ Not quite. The answer is '+L[q.a]+'.'}</b> ${q.e}</div><button class="speak" onclick="speakFb(${i})" aria-label="Read the explanation">🔊</button></div>`;
+  if(fresh && ok) miniBurst(document.getElementById(`o${i}_${j}`));
+}
+function score(){ let c=0,n=0; D.qs.forEach((q,i)=>{ if(state.ans[i]!=null){ n++; if(state.ans[i]===q.a) c++; } }); return {c,n,t:D.qs.length}; }
+function updateKeys(){ document.getElementById("keys").innerHTML = D.qs.map((q,i)=>`<span class="${state.ans[i]===q.a?'on':''}">🔑</span>`).join(""); }
+function checkDone(fresh){
+  const s = score(), box = document.getElementById("donebox");
+  const p = pScore();
+  if(s.n<s.t || p.n<p.t){ box.innerHTML=""; return; }
+  const msg = s.c===s.t ? "PERFECT! Every key unlocked! 🏆" : s.c>=4 ? "Great job! You're ready! 🌟" : "Nice work finishing! Read the explanations again before test day. 💪";
+  box.innerHTML = `<div class="box done"><div class="big">🔑 ${s.c} / ${s.t}</div><p style="font-size:22px;font-weight:700;margin:4px 0">⚡ Power-Up Punch: ${p.c} / ${p.t} ${p.c===p.t?"🔥":""}</p><p style="font-size:20px;font-weight:700">${msg}</p>
+    <p>👤 ${esc(state.name||"(type your name at the top)")} · Bell Ringer: ${D.title}</p>
+    <p>📸 Take a screenshot of this box and turn it in on Canvas.</p></div>`;
+  if(fresh){ setTimeout(()=>box.scrollIntoView({behavior:"smooth",block:"center"}),300); bigConfetti(); }
+}
+function esc(s){ return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c])); }
+
+/* ===== TEACHER (code: locksmith) ===== */
+function openTeacher(){
+  const code = prompt("Teacher code:");
+  if(!code || code.trim().toLowerCase()!=="locksmith") return;
+  stopSpeak();
+  let h = `<p style="font-size:15px;color:var(--muted)">${D.skills.map(k=>k[1]).join(" · ")}</p><table><tr><th>#</th><th>Answer</th><th>Skill</th><th>Why</th></tr>`;
+  D.qs.forEach((q,i)=>{ h += `<tr><td>${i+1}</td><td><b>${L[q.a]}</b></td><td>${q.t==='prose'?'Prose &amp; Poetry':'Across Genres &amp; Vocab'}</td><td>${q.e}</td></tr>`; });
+  D.power.forEach((q,i)=>{ h += `<tr><td>⚡${i+1}</td><td><b>${L[q.a]}</b></td><td>Power-Up Punch</td><td>${q.e}</td></tr>`; });
+  document.getElementById("keytable").innerHTML = h + `</table>`;
+  document.getElementById("student").classList.add("hidden");
+  document.getElementById("teacher").classList.remove("hidden");
+  scrollTo(0,0);
+}
+function closeTeacher(){ document.getElementById("teacher").classList.add("hidden"); document.getElementById("student").classList.remove("hidden"); }
+function resetAll(){
+  if(!confirm("Clear the saved answers for this day on this iPad?")) return;
+  state = {name:state.name, ans:D.qs.map(()=>null), pans:D.power.map(()=>null)}; save(); closeTeacher(); render(); scrollTo(0,0);
+}
+
+/* ===== READ-ALOUD (Google US English voice) ===== */
+let voice = null;
+function pickVoice(){
+  const vs = speechSynthesis.getVoices();
+  voice = vs.find(v=>v.name==="Google US English") || vs.find(v=>/google/i.test(v.name)&&v.lang==="en-US") || vs.find(v=>v.lang==="en-US") || null;
+}
+if("speechSynthesis" in window){ pickVoice(); speechSynthesis.onvoiceschanged = pickVoice; }
+function clean(t){ return t.replace(/ELA\.\d+\.[A-Z]+\.\d+(\.\d+)?/g,"").replace(/[✅❌🔑]/g,"").replace(/[—–]/g,", ").replace(/\s+/g," ").trim(); }
+function speak(text){
+  if(!("speechSynthesis" in window)) return;
+  speechSynthesis.cancel();
+  const parts = clean(text).match(/[^.!?]+[.!?”"]*\s*/g) || [text];
+  parts.forEach(p=>{ const u = new SpeechSynthesisUtterance(p); if(voice) u.voice=voice; u.lang="en-US"; u.rate=0.95; speechSynthesis.speak(u); });
+}
+function stopSpeak(){ try{ speechSynthesis.cancel(); }catch(e){} }
+function speakEl(id){
+  const el = document.getElementById(id).cloneNode(true);
+  el.querySelectorAll("h3,p,div").forEach(n=>n.append(". "));
+  el.querySelectorAll(".poem").forEach(n=>{ n.textContent = n.textContent.replace(/\n/g,", "); });
+  speak(el.textContent);
+}
+function speakQ(i){
+  const q = D.qs[i], tmp = document.createElement("div"); tmp.innerHTML = q.q;
+  let t = "Question " + (i+1) + ". " + tmp.textContent + " ";
+  q.o.forEach((o,j)=>{ t += " " + L[j] + ". " + o + (/[.!?”]$/.test(o)?" ":". "); });
+  speak(t);
+}
+function speakFb(i){ speak(document.getElementById("fbt"+i).textContent); }
+
+/* ===== CONFETTI ===== */
+const cv = document.getElementById("confetti"), cx = cv.getContext("2d");
+let bits = [], running = false;
+function sizeCv(){ cv.width = innerWidth; cv.height = innerHeight; }
+sizeCv(); addEventListener("resize", sizeCv);
+const COLORS = ["#e8505b","#f28c28","#f2b632","#2fb380","#2f8fe0","#8b5cf6"];
+function addBits(x,y,n,spread,power){
+  for(let k=0;k<n;k++){ const a = Math.random()*Math.PI*2, s = Math.random()*power;
+    bits.push({x,y,vx:Math.cos(a)*s*spread,vy:Math.sin(a)*s-power*0.6,r:4+Math.random()*5,c:COLORS[k%6],rot:Math.random()*6,vr:(Math.random()-.5)*.3,life:0}); }
+  if(!running){ running=true; requestAnimationFrame(tick); }
+}
+function tick(){
+  cx.clearRect(0,0,cv.width,cv.height);
+  bits.forEach(b=>{ b.vy+=0.25; b.vx*=0.99; b.x+=b.vx; b.y+=b.vy; b.rot+=b.vr; b.life++;
+    cx.save(); cx.translate(b.x,b.y); cx.rotate(b.rot); cx.fillStyle=b.c; cx.fillRect(-b.r/2,-b.r/4,b.r,b.r/2); cx.restore(); });
+  bits = bits.filter(b=>b.y<cv.height+30 && b.life<400);
+  if(bits.length) requestAnimationFrame(tick); else { running=false; cx.clearRect(0,0,cv.width,cv.height); }
+}
+function miniBurst(el){ const r = el.getBoundingClientRect(); addBits(r.left+r.width/2, r.top+r.height/2, 30, 1, 9); }
+function bigConfetti(){ let n=0; const iv = setInterval(()=>{ addBits(Math.random()*innerWidth, innerHeight*0.25, 70, 1.2, 14); if(++n>5) clearInterval(iv); }, 250); }
+
+render();
+</script>
+</body>
+</html>
